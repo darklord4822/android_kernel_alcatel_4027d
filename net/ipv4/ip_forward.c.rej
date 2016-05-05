@@ -1,0 +1,12 @@
+--- net/ipv4/ip_forward.c
++++ net/ipv4/ip_forward.c
+@@ -126,6 +126,9 @@
+ 	struct rtable *rt;	/* Route we use */
+ 	struct ip_options *opt	= &(IPCB(skb)->opt);
+ 
++	if (unlikely(skb->sk))
++		goto drop;
++
+ 	if (skb_warn_if_lro(skb))
+ 		goto drop;
+ 

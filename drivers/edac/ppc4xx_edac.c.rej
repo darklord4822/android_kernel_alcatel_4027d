@@ -1,0 +1,11 @@
+--- drivers/edac/ppc4xx_edac.c
++++ drivers/edac/ppc4xx_edac.c
+@@ -921,7 +921,7 @@
+ 	 */
+ 
+ 	for (row = 0; row < mci->nr_csrows; row++) {
+-		struct csrow_info *csi = &mci->csrows[row];
++		struct csrow_info *csi = mci->csrows[row];
+ 
+ 		/*
+ 		 * Get the configuration settings for this

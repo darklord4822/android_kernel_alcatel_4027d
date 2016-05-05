@@ -1,0 +1,11 @@
+--- drivers/input/mouse/elantech.c
++++ drivers/input/mouse/elantech.c
+@@ -1000,6 +1015,8 @@
+  * Asus K53SV              0x450f01        78, 15, 0c      2 hw buttons
+  * Asus G46VW              0x460f02        00, 18, 0c      2 hw buttons
+  * Asus G750JX             0x360f00        00, 16, 0c      2 hw buttons
++ * Asus TP500LN            0x381f17        10, 14, 0e      clickpad
++ * Asus X750JN             0x381f17        10, 14, 0e      clickpad
+  * Asus UX31               0x361f00        20, 15, 0e      clickpad
+  * Asus UX32VD             0x361f02        00, 15, 0e      clickpad
+  * Avatar AVIU-145A2       0x361f00        ?               clickpad
